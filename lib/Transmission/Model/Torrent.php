@@ -514,4 +514,92 @@ class Torrent extends AbstractModel
             'uploadedEver' => 'uploadedEver'
         );
     }
+
+    /**
+     * Get the value of desiredAvailable
+     *
+     * @return  number
+     */ 
+    public function getDesiredAvailable()
+    {
+        return $this->desiredAvailable;
+    }
+
+    /**
+     * Set the value of desiredAvailable
+     *
+     * @param  number  $desiredAvailable
+     *
+     * @return  self
+     */ 
+    public function setDesiredAvailable($desiredAvailable)
+    {
+        $this->desiredAvailable = $desiredAvailable;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of corruptEver
+     *
+     * @return  number
+     */ 
+    public function getCorruptEver()
+    {
+        return $this->corruptEver;
+    }
+
+    /**
+     * Set the value of corruptEver
+     *
+     * @param  number  $corruptEver
+     *
+     * @return  self
+     */ 
+    public function setCorruptEver($corruptEver)
+    {
+        $this->corruptEver = $corruptEver;
+
+        return $this;
+    }
+
+    /**
+     * @return  string
+     */ 
+    public function getErrorString()
+    {
+        return $this->errorString;
+    }
+
+    /**
+     * @param  string  $errorString
+     *
+     * @return  self
+     */ 
+    public function setErrorString(string $errorString)
+    {
+        $this->errorString = $errorString;
+
+        return $this;
+    }
+
+    /**
+     * @return  integer
+     */ 
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * @param  integer  $error
+     *
+     * @return  self
+     */ 
+    public function setError($error)
+    {
+        $this->error = $error;
+
+        return $this;
+    }
 }
