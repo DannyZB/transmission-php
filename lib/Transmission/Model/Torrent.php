@@ -107,7 +107,27 @@ class Torrent extends AbstractModel
      * @var integer
      */
     protected $uploadedEver;
+    
+    /**
+     * @var integer
+     */
+    protected $error;
+    
+    /**
+     * @var string
+     */
+    protected $errorString;
 
+    /**
+     * @var number
+     */
+    protected $corruptEver;
+
+    /**
+     * @var number
+     */
+    protected $desiredAvailable;
+    
     /**
      * @param integer $id
      */
@@ -473,6 +493,10 @@ class Torrent extends AbstractModel
             'sizeWhenDone' => 'size',
             'name' => 'name',
             'status' => 'status',
+            'error' => 'error',
+            'errorString' => 'errorString',
+            'corruptEver' => 'corruptEver',
+            'desiredAvailable' => 'desiredAvailable',
             'isFinished' => 'finished',
             'rateUpload' => 'uploadRate',
             'rateDownload' => 'downloadRate',
