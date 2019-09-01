@@ -482,38 +482,6 @@ class Torrent extends AbstractModel
         $this->uploadedEver = $uploadedEver;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public static function getMapping()
-    {
-        return array(
-            'id' => 'id',
-            'eta' => 'eta',
-            'sizeWhenDone' => 'size',
-            'name' => 'name',
-            'status' => 'status',
-            'error' => 'error',
-            'errorString' => 'errorString',
-            'corruptEver' => 'corruptEver',
-            'desiredAvailable' => 'desiredAvailable',
-            'isFinished' => 'finished',
-            'rateUpload' => 'uploadRate',
-            'rateDownload' => 'downloadRate',
-            'percentDone' => 'percentDone',
-            'files' => 'files',
-            'peers' => 'peers',
-            'peersConnected' => 'peersConnected',
-            'trackers' => 'trackers',
-            'trackerStats' => 'trackerStats',
-            'startDate' => 'startDate',
-            'uploadRatio' => 'uploadRatio',
-            'hashString' => 'hash',
-            'downloadDir' => 'downloadDir',
-            'downloadedEver' => 'downloadedEver',
-            'uploadedEver' => 'uploadedEver'
-        );
-    }
 
     /**
      * Get the value of desiredAvailable
@@ -601,5 +569,38 @@ class Torrent extends AbstractModel
         $this->error = $error;
 
         return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public static function getMapping()
+    {
+        return array(
+            'id' => 'id',
+            'eta' => 'eta',
+            'sizeWhenDone' => 'size',
+            'name' => 'name',
+            'status' => 'status',
+            'error' => 'error',
+            'errorString' => 'errorString',
+            'corruptEver' => 'corruptEver',
+            'desiredAvailable' => 'desiredAvailable',
+            'isFinished' => 'finished',
+            'rateUpload' => 'uploadRate',
+            'rateDownload' => 'downloadRate',
+            'percentDone' => 'percentDone',
+            'files' => 'files',
+            'peers' => 'peers',
+            'peersConnected' => 'peersConnected',
+            'trackers' => 'trackers',
+            'trackerStats' => 'trackerStats',
+            'startDate' => 'startDate',
+            'uploadRatio' => 'uploadRatio',
+            'hashString' => 'hash',
+            'downloadDir' => 'downloadDir',
+            'downloadedEver' => 'downloadedEver',
+            'uploadedEver' => 'uploadedEver'
+        );
     }
 }
